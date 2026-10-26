@@ -1,0 +1,59 @@
+# C and C++ compiled files
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# Debug and profiling files
+*.pdb
+*.ilk
+*.prof
+*.gcda
+*.gcno
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files and logs
+*.tmp
+*.temp
+*.log
+*~
+
+# Build directories
+build/
+dist/
+out/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
