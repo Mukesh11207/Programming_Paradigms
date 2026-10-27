@@ -2,14 +2,14 @@ import threading
 import queue
 import time
 
-SIZE = 5
-buffer = queue.Queue(maxsize = SIZE)
+Size = 5
+buffer = queue.QUEUE(Size)
 
-empty = threading.Semaphore(SIZE)
+empty = threading.Semaphore(Size)
 full = threading.Semaphore(0)
-mutex = threading.Lock()
+mutex = threading.lock()
 
-def producer():
+def Producer():
     for i in range(1,11):
         empty.acquire()
         with mutex:
@@ -18,22 +18,22 @@ def producer():
         full.release()
         time.sleep(0.2)
 
-def consumer():
+def Consumer():
     for i in range(1,11):
         full.acquire()
         with mutex:
             item = buffer.get()
-            print("Consumed :",item)
+            print("Consumed : ",item)
         empty.release()
         time.sleep(0.2)
 
-p = threading.Thread(target = producer)
-c = threading.Thread(target = consumer)
+p = threading.Thread(target = Producer)
+q = threading.Thread(target = Consumer)
 
 p.start()
-c.start()
+q.start()
 
 p.join()
-c.join()
+q.join()
 
 print("Finished")
