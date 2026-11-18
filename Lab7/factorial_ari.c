@@ -33,7 +33,6 @@ void push(char name[],int n,Ari *dynamic_link,Ari *static_link){
 void display(){
     printf("\n\nActivation Record Stack :- ");
     printf("Function\t n\t AR Address\t\t Dynamic Link\t\t Static Link\n");
-
     printf("--------------------------------------------------------------------------\n");
 
     for(int i = top; i >= 0; i--) {
@@ -65,9 +64,7 @@ int factorial(int n){
     return result;
 }
 int main() {
-
     int n;
-
     printf("Enter number: ");
     scanf("%d", &n);
 
