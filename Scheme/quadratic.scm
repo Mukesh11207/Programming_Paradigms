@@ -1,8 +1,10 @@
 #lang racket
 (display "Enter coefficient of x^2 :- ")
 (define a(read))
+
 (display "Enter coefficient of x :- ")
 (define b(read))
+
 (display "Enter constant :- ")
 (define c(read))
 
